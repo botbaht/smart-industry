@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.2.1/material.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.4/dialog-polyfill.min.css">
   <link rel="stylesheet" href="/styles.css">
+  <!-- <link rel="stylesheet" href="https://rawgit.com/jukbot/smart-industry/master/src/styles.css"> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
   <link rel="icon" sizes="192x192" href="assets/images/android-desktop.png">
@@ -474,9 +475,16 @@ Get Started
         </defs>
       </svg>
   <script src="assets/js/calculateEff.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.2.1/material.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.4/dialog-polyfill.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.2.1/material.min.js"></script>
-<script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.d0d8a0de434dc3b9a2a1.bundle.js"></script><script type="text/javascript" src="main.1a64576a3ac00f6f6eee.bundle.js"></script></body>
+  {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
+<script>
+  System.import('system-config.js').then(function () {
+    System.import('main');
+  }).catch(console.error.bind(console));
+</script>
+
+<script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.d0d8a0de434dc3b9a2a1.bundle.js"></script><script type="text/javascript" src="main.4b9d48778c8feac2403f.bundle.js"></script></body>
 
 </html>
